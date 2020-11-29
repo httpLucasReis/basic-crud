@@ -1,5 +1,6 @@
 const express = require('express');
 const userController = require('./controllers/userController');
+const projectController = require('./controllers/projectController')
 const routes = express.Router();
 
 // Creating routes
@@ -10,5 +11,6 @@ routes
       .put('/users/:id', userController.update)
       .delete('/users/:id', userController.delete)
       // Projects routes
+      .get('/projects', projectController.index)
 
 module.exports = routes;
